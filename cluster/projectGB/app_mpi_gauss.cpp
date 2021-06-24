@@ -127,11 +127,14 @@ int main(int argc, char *argv[])
     if (log)
        cout << "Iniciando..." << endl;
 
-    if (argc != 2) {
+    if (argc < 2) {
         cout << "Uso: " << argv[0] << " len" << endl;
         return 0;
     } else {
         len = atoi(argv[1]);
+
+        if (argc > 2)
+            log = 1;
     }
 
     MPI_Init(&argc, &argv);
