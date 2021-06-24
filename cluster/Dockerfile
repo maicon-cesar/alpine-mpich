@@ -11,10 +11,10 @@ FROM nlknguyen/alpine-mpich:onbuild
 
 # Copy the content of `project` directory in the host machine to 
 # the current working directory in this Docker image
-COPY project/ .
+COPY projectGB/ .
 
 # Normal build command
-RUN mpicc -o mpi_hello_world mpi_hello_world.c
+RUN mpic++ -o app_mpi_gauss app_mpi_gauss.cpp
 
 # ####################
 # For Docker beginner:
