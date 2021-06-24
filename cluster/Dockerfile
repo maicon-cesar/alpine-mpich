@@ -14,7 +14,7 @@ FROM nlknguyen/alpine-mpich:onbuild
 COPY projectGB/ .
 
 # Normal build command
-RUN mpic++ -o app_mpi_gauss app_mpi_gauss.cpp
+RUN make clean all 
 
 # ####################
 # For Docker beginner:
